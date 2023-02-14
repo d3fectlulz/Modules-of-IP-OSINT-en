@@ -34,3 +34,5 @@ for port in portList:
         print(f"Connection error: {err}")
         sys.exit()
 
+print("")
+system("bash main.sh")
