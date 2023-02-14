@@ -346,4 +346,4 @@ for port in port18nmassesadmin:
         exit()
 
 print("")
-print("bash main.sh")
+system("bash main.sh")
