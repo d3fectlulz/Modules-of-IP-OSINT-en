@@ -344,3 +344,6 @@ for port in port18nmassesadmin:
     except socket.error as err:
         print(f"Connection error: {err}")
         exit()
+
+print("")
+print("bash main.sh")
