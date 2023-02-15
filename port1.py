@@ -38,7 +38,7 @@ port17iasreg = [2140]
 port18nmassesadmin = [3150]
 port24sql = [3306]
 
-print("\033[1;37m[#]Escaneando 23 puertos ...")
+print("\033[1;37m[#]Escaneando 24 puertos ...")
 system("sleep 1")
 print("")
 
