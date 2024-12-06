@@ -9,7 +9,7 @@ print("\033[1;32m ___) | (_| (_| | | | | | | |  __/ |")
 print("\033[1;32m|____/ \___\__,_|_| |_|_| |_|\___|_|")
 print("\n")
 system("setterm -foreground green")
-ip = input("[+]Ingrese la IP que desea escanear > \033[1;37m")
+ip = input("[+]Enter the IP you want to scan > \033[1;37m")
 print("")
 
 ip_addr = (ip)
@@ -38,7 +38,7 @@ port17iasreg = [2140]
 port18nmassesadmin = [3150]
 port24sql = [3306]
 
-print("\033[1;37m[#]Escaneando 24 puertos ...")
+print("\033[1;37m[#]Scanning 24 ports ...")
 system("sleep 1")
 print("")
 
@@ -48,13 +48,13 @@ for port in port1ftp:
         sock.settimeout(5)
         status = sock.connect_ex((ip_addr, port))
         if status == 0:
-            print("\033[1;33mPuerto | Servicio | Estado")
+            print("\033[1;33mPort | Service | State")
             print("")
-            print(f"\033[1;31mPuerto: \033[1;32m{port} ftp - Abierto")
+            print(f"\033[1;31mPort: \033[1;32m{port} ftp - Open")
         else:
-            print("\033[1;33mPuerto | Servicio | Estado")
+            print("\033[1;33mPort | Service | State")
             print("")
-            print(f"\033[1;31mPuerto: \033[1;32m{port} ftp - Cerrado")
+            print(f"\033[1;31mPort: \033[1;32m{port} ftp - Closed")
         sock.close()
     except socket.error as err:
         print(f"Connection error: {err}")
@@ -65,9 +65,9 @@ for port in port2ssh:
         sock.settimeout(5)
         status = sock.connect_ex((ip_addr, port))
         if status == 0:
-            print(f"\033[1;31mPuerto: \033[1;32m{port} ssh - Abierto")
+            print(f"\033[1;31mPort: \033[1;32m{port} ssh - Open")
         else:
-            print(f"\033[1;31mPuerto: \033[1;32m{port} ssh - Cerrado")
+            print(f"\033[1;31mPuerto: \033[1;32m{port} ssh - Closed")
         sock.close()
     except socket.error as err:
         print(f"Connection error: {err}")
@@ -78,9 +78,9 @@ for port in port3telnet:
         sock.settimeout(5)
         status = sock.connect_ex((ip_addr, port))
         if status == 0:
-            print(f"\033[1;31mPuerto: \033[1;32m{port} telnet - Abierto")
+            print(f"\033[1;31mPort: \033[1;32m{port} telnet - Open")
         else:
-            print(f"\033[1;31mPuerto: \033[1;32m{port} telnet - Cerrado")
+            print(f"\033[1;31mPort: \033[1;32m{port} telnet - Closed")
         sock.close()
     except socket.error as err:
         print(f"Connection error: {err}")
@@ -91,9 +91,9 @@ for port in port4smb:
         sock.settimeout(5)
         status = sock.connect_ex((ip_addr, port))
         if status == 0:
-            print(f"\033[1;31mPuerto: \033[1;32m{port} smb - Abierto")
+            print(f"\033[1;31mPort: \033[1;32m{port} smb - Open")
         else:
-            print(f"\033[1;31mPuerto: \033[1;32m{port} smb - Cerrado")
+            print(f"\033[1;31mPort: \033[1;32m{port} smb - Closed")
         sock.close()
     except socket.error as err:
         print(f"Connection error: {err}")
@@ -104,9 +104,9 @@ for port in port5netbiosns:
         sock.settimeout(5)
         status = sock.connect_ex((ip_addr, port))
         if status == 0:
-            print(f"\033[1;31mPuerto: \033[1;32m{port} netbios-ns - Abierto")
+            print(f"\033[1;31mPort: \033[1;32m{port} netbios-ns - Open")
         else:
-            print(f"\033[1;31mPuerto: \033[1;32m{port} netbios-ns - Cerrado")
+            print(f"\033[1;31mPort: \033[1;32m{port} netbios-ns - Closed")
         sock.close()
     except socket.error as err:
         print(f"Connection error: {err}")
@@ -117,9 +117,9 @@ for port in port6microsoftds:
         sock.settimeout(5)
         status = sock.connect_ex((ip_addr, port))
         if status == 0:
-            print(f"\033[1;31mPuerto: \033[1;32m{port} microsoft-ds - Abierto")
+            print(f"\033[1;31mPort: \033[1;32m{port} microsoft-ds - Open")
         else:
-            print(f"\033[1;31mPuerto: \033[1;32m{port} microsoft-ds - Cerrado")
+            print(f"\033[1;31mPort: \033[1;32m{port} microsoft-ds - Closed")
         sock.close()
     except socket.error as err:
         print(f"Connection error: {err}")
@@ -130,9 +130,9 @@ for port in port7dns:
         sock.settimeout(5)
         status = sock.connect_ex((ip_addr, port))
         if status == 0:
-            print(f"\033[1;31mPuerto: \033[1;32m{port} dns - Abierto")
+            print(f"\033[1;31mPort: \033[1;32m{port} dns - Open")
         else:
-            print(f"\033[1;31mPuerto: \033[1;32m{port} dns - Cerrado")
+            print(f"\033[1;31mPort: \033[1;32m{port} dns - Closed")
         sock.close()
     except socket.error as err:
         print(f"Connection error: {err}")
@@ -143,9 +143,9 @@ for port in port8https:
         sock.settimeout(5)
         status = sock.connect_ex((ip_addr, port))
         if status == 0:
-            print(f"\033[1;31mPuerto: \033[1;32m{port} https - Abierto")
+            print(f"\033[1;31mPort: \033[1;32m{port} https - Open")
         else:
-            print(f"\033[1;31mPuerto: \033[1;32m{port} https - Cerrado")
+            print(f"\033[1;31mPort: \033[1;32m{port} https - Closed")
         sock.close()
     except socket.error as err:
         print(f"Connection error: {err}")
@@ -156,9 +156,9 @@ for port in port9http:
         sock.settimeout(5)
         status = sock.connect_ex((ip_addr, port))
         if status == 0:
-            print(f"\033[1;31mPuerto: \033[1;32m{port} http - Abierto")
+            print(f"\033[1;31mPort: \033[1;32m{port} http - Open")
         else:
-            print(f"\033[1;31mPuerto: \033[1;32m{port} http - Cerrado")
+            print(f"\033[1;31mPuerto: \033[1;32m{port} http - Closed")
         sock.close()
     except socket.error as err:
         print(f"Connection error: {err}")
@@ -169,9 +169,9 @@ for port in port10proxy:
         sock.settimeout(5)
         status = sock.connect_ex((ip_addr, port))
         if status == 0:
-            print(f"\033[1;31mPuerto: \033[1;32m{port} proxy - Abierto")
+            print(f"\033[1;31mPort: \033[1;32m{port} proxy - Open")
         else:
-            print(f"\033[1;31mPuerto: \033[1;32m{port} proxy - Cerrado")
+            print(f"\033[1;31mPort: \033[1;32m{port} proxy - Closed")
         sock.close()
     except socket.error as err:
         print(f"Connection error: {err}")
@@ -182,9 +182,9 @@ for port in port11pcsynchttps:
         sock.settimeout(5)
         status = sock.connect_ex((ip_addr, port))
         if status == 0:
-            print(f"\033[1;31mPuerto: \033[1;32m{port} pcsync-https - Abierto")
+            print(f"\033[1;31mPort: \033[1;32m{port} pcsync-https - Open")
         else:
-            print(f"\033[1;31mPuerto: \033[1;32m{port} pcsync-https - Cerrado")
+            print(f"\033[1;31mPort: \033[1;32m{port} pcsync-https - Closed")
         sock.close()
     except socket.error as err:
         print(f"Connection error: {err}")
@@ -195,9 +195,9 @@ for port in port19radanhttp:
         sock.settimeout(5)
         status = sock.connect_ex((ip_addr, port))
         if status == 0:
-            print(f"\033[1;31mPuerto: \033[1;32m{port} radan-http - Abierto")
+            print(f"\033[1;31mPort: \033[1;32m{port} radan-http - Open")
         else:
-            print(f"\033[1;31mPuerto: \033[1;32m{port} radan-http - Cerrado")
+            print(f"\033[1;31mPort: \033[1;32m{port} radan-http - Closed")
         sock.close()
     except socket.error as err:
         print(f"Connection error: {err}")
@@ -208,9 +208,9 @@ for port in port20dditcp1:
         sock.settimeout(5)
         status = sock.connect_ex((ip_addr, port))
         if status == 0:
-            print(f"\033[1;31mPuerto: \033[1;32m{port} ddi-tcp-1 - Abierto")
+            print(f"\033[1;31mPort: \033[1;32m{port} ddi-tcp-1 - Open")
         else:
-            print(f"\033[1;31mPuerto: \033[1;32m{port} ddi-tcp-1 - Cerrado")
+            print(f"\033[1;31mPort: \033[1;32m{port} ddi-tcp-1 - Closed")
         sock.close()
     except socket.error as err:
         print(f"Connection error: {err}")
@@ -221,9 +221,9 @@ for port in port21snmp:
         sock.settimeout(5)
         status = sock.connect_ex((ip_addr, port))
         if status == 0:
-            print(f"\033[1;31mPuerto: \033[1;32m{port} snmp - Abierto")
+            print(f"\033[1;31mPort: \033[1;32m{port} snmp - Open")
         else:
-            print(f"\033[1;31mPuerto: \033[1;32m{port} snmp - Cerrado")
+            print(f"\033[1;31mPort: \033[1;32m{port} snmp - Closed")
         sock.close()
     except socket.error as err:
         print(f"Connection error: {err}")
@@ -234,9 +234,9 @@ for port in port22ircu:
         sock.settimeout(5)
         status = sock.connect_ex((ip_addr, port))
         if status == 0:
-            print(f"\033[1;31mPuerto: \033[1;32m{port} ircu - Abierto")
+            print(f"\033[1;31mPort: \033[1;32m{port} ircu - Open")
         else:
-            print(f"\033[1;31mPuerto: \033[1;32m{port} ircu - Cerrado")
+            print(f"\033[1;31mPort: \033[1;32m{port} ircu - Closed")
         sock.close()
     except socket.error as err:
         print(f"Connection error: {err}")
@@ -247,9 +247,9 @@ for port in port23trojan:
         sock.settimeout(5)
         status = sock.connect_ex((ip_addr, port))
         if status == 0:
-            print(f"\033[1;31mPuerto: \033[1;32m{port} trojan - Abierto")
+            print(f"\033[1;31mPort: \033[1;32m{port} trojan - Open")
         else:
-            print(f"\033[1;31mPuerto: \033[1;32m{port} trojan - Cerrado")
+            print(f"\033[1;31mPort: \033[1;32m{port} trojan - Closed")
         sock.close()
     except socket.error as err:
         print(f"Connection error: {err}")
@@ -260,9 +260,9 @@ for port in port12smtp:
         sock.settimeout(5)
         status = sock.connect_ex((ip_addr, port))
         if status == 0:
-            print(f"\033[1;31mPuerto: \033[1;32m{port} smtb - Abierto")
+            print(f"\033[1;31mPort: \033[1;32m{port} smtb - Open")
         else:
-            print(f"\033[1;31mPuerto: \033[1;32m{port} smtb - Cerrado")
+            print(f"\033[1;31mPort: \033[1;32m{port} smtb - Closed")
         sock.close()
     except socket.error as err:
         print(f"Connection error: {err}")
@@ -273,9 +273,9 @@ for port in port13tftp:
         sock.settimeout(5)
         status = sock.connect_ex((ip_addr, port))
         if status == 0:
-            print(f"\033[1;31mPuerto: \033[1;32m{port} tftp - Abierto")
+            print(f"\033[1;31mPort: \033[1;32m{port} tftp - Open")
         else:
-            print(f"\033[1;31mPuerto: \033[1;32m{port} tftp - Cerrado")
+            print(f"\033[1;31mPort: \033[1;32m{port} tftp - Closed")
         sock.close()
     except socket.error as err:
         print(f"Connection error: {err}")
@@ -286,9 +286,9 @@ for port in port14aed512:
         sock.settimeout(5)
         status = sock.connect_ex((ip_addr, port))
         if status == 0:
-            print(f"\033[1;31mPuerto: \033[1;32m{port} aed-512 - Abierto")
+            print(f"\033[1;31mPort: \033[1;32m{port} aed-512 - Open")
         else:
-            print(f"\033[1;31mPuerto: \033[1;32m{port} aed-512 - Cerrado")
+            print(f"\033[1;31mPort: \033[1;32m{port} aed-512 - Closed")
         sock.close()
     except socket.error as err:
         print(f"Connection error: {err}")
