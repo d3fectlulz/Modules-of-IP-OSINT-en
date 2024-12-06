@@ -34,7 +34,7 @@ system("sleep 2")
 system("setterm -foreground cyan")
 
 def isValid(card_num):
-  addition = 0
+  sum = 0
   num_digits = len(num_cards)
   pos_even_odd = num_digits
 
