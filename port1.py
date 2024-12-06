@@ -299,9 +299,9 @@ for port in port15serialgateway:
         sock.settimeout(5)
         status = sock.connect_ex((ip_addr, port))
         if status == 0:
-            print(f"\033[1;31mPuerto: \033[1;32m{port} serialgateway - Abierto")
+            print(f"\033[1;31mPort: \033[1;32m{port} serialgateway - Open")
         else:
-            print(f"\033[1;31mPuerto: \033[1;32m{port} serialgateway - Cerrado")
+            print(f"\033[1;31mPort: \033[1;32m{port} serialgateway - Closed")
         sock.close()
     except socket.error as err:
         print(f"Connection error: {err}")
@@ -312,9 +312,9 @@ for port in port16seagullais:
         sock.settimeout(5)
         status = sock.connect_ex((ip_addr, port))
         if status == 0:
-            print(f"\033[1;31mPuerto: \033[1;32m{port} seagull-ais - Abierto")
+            print(f"\033[1;31mPort: \033[1;32m{port} seagull-ais - Open")
         else:
-            print(f"\033[1;31mPuerto: \033[1;32m{port} seagull-ais - Cerrado")
+            print(f"\033[1;31mPort: \033[1;32m{port} seagull-ais - Closed")
         sock.close()
     except socket.error as err:
         print(f"Connection error: {err}")
@@ -325,9 +325,9 @@ for port in port17iasreg:
         sock.settimeout(5)
         status = sock.connect_ex((ip_addr, port))
         if status == 0:
-            print(f"\033[1;31mPuerto: \033[1;32m{port} ias-reg - Abierto")
+            print(f"\033[1;31mPort: \033[1;32m{port} ias-reg - Open")
         else:
-            print(f"\033[1;31mPuerto: \033[1;32m{port} ias-reg - Cerrado")
+            print(f"\033[1;31mPort: \033[1;32m{port} ias-reg - Closed")
         sock.close()
     except socket.error as err:
         print(f"Connection error: {err}")
@@ -338,9 +338,9 @@ for port in port18nmassesadmin:
         sock.settimeout(5)
         status = sock.connect_ex((ip_addr, port))
         if status == 0:
-            print(f"\033[1;31mPuerto: \033[1;32m{port} nm-asses-admin - Abierto")
+            print(f"\033[1;31mPort: \033[1;32m{port} nm-asses-admin - Open")
         else:
-            print(f"\033[1;31mPuerto: \033[1;32m{port} nm-asses-admin - Cerrado")
+            print(f"\033[1;31mPort: \033[1;32m{port} nm-asses-admin - Closed")
         sock.close()
     except socket.error as err:
         print(f"Connection error: {err}")
@@ -352,9 +352,9 @@ for port in port24sql:
         sock.settimeout(5)
         status = sock.connect_ex((ip_addr, port))
         if status == 0:
-            print(f"\033[1;31mPuerto: \033[1;32m{port} MySQL - Abierto")
+            print(f"\033[1;31mPort: \033[1;32m{port} MySQL - Open")
         else:
-            print(f"\033[1;31mPuerto: \033[1;32m{port} MySQL - Cerrado")
+            print(f"\033[1;31mPort: \033[1;32m{port} MySQL - Closed")
         sock.close()
     except socket.error as err:
         print(f"Connection error: {err}")
