@@ -16,37 +16,37 @@ print ("╚═╝  ╚═╝╚═╝  ╚═╝ ╚═════╝╚═╝ 
 print ("")
 
 print("\033[1;31m#####################################")
-print("\033[1;32m#  Generador de targeta de credito  #")
+print("\033[1;32m#  Credit card generator            #")
 print("\033[1;31m#####################################")
 print("\033[1;36m# Edited By : Demo                  #")
 print("\033[1;36m# Versión : 1.9                     #")
 print("\033[1;36m# Code : PYTHON                     #")
 print("\033[1;36m# UKL-TEAM, MRX-TEAM, AND YOU       #")
 print("")
-bin_format = input("\033[1;32m[~]\033[1;37mIngrese el bin: ")
-cantidad = input("\033[1;32m[~]\033[1;37mIngrese la cantidad a generar: ")
+bin_format = input("\033[1;32m[~]\033[1;37mEnter the bin: ")
+cantidad = input("\033[1;32m[~]\033[1;37mEnter the amount to generate: ")
 print("")
 print("\033[1;31m#####################################")
-print("\033[1;33m#       Generando Targetas..        #")
+print("\033[1;33m#       Generating Targets..        #")
 print("\033[1;31m#####################################")
 print("")
 system("sleep 2")
 system("setterm -foreground cyan")
 
-def esValido(num_tarjeta):
-  suma = 0
-  num_digitos = len(num_tarjeta)
-  pos_par_impar = num_digitos & 1
+def isValid(card_num):
+  addition = 0
+  num_digits = len(num_cards)
+  pos_even_odd = num_digits
 
-  for i in range(0, num_digitos):
-    digito = int(num_tarjeta[i])
+  for i in range(0, num_digits):
+    digit = int(card_num[i])
     if not ((i & 1) ^ pos_par_impar):
-      digito = digito * 2
-    if digito > 9:
-      digito = digito - 9
-    suma = suma + digito
+      digit = digit * 2
+    if digit > 9:
+      digit = digit - 9
+    sum = sum + digit
 
-  return (suma % 10 == 0)
+  return (sum % 10 == 0)
 
 def generar_cc(bin_format):
   cc = ""
@@ -58,21 +58,20 @@ def generar_cc(bin_format):
       elif bin_format[i] == "x":
         cc += str(randint(0, 9))
       else:
-        print("\nCaracter no valido en el formato: {}\n".format(bin_format))
-        print("El formato del bin es: xxxxxxxxxxxxxxxx de 16 digitos\n")
+        print("\nCharacter invalid in the format: {}\n".format(bin_format))
+        print("The bin format is: xxxxxxxxxxxxxxxx of 16 digits\n")
         sys.exit()
 
     for i in range(10):
-      verificador = cc + str(i)
-      if esValido(verificador):
-        cc = verificador
+      verifier = cc + str(i)
+      if isValid(verifier):
+        cc = verifier
         break
       else:
-        verificador = cc
-
+        verifier = cc
   else:
-    print("\nERROR: Inserte un bin válido\n")
-    print("SOLUCIÓN: El formato del bin es: xxxxxxxxxxxxxxxx de 16 dígitos\n")
+    print("\nERROR: Please insert a valid bin\n")
+    print("SOLUTION: The bin format is: xxxxxxxxxxxxxxxx 16 digits\n")
     sys.exit()
 
   return cc
