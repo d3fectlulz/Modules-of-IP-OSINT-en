@@ -76,6 +76,7 @@ def generar_cc(bin_format):
 
   return cc
 
+
 def ccv_gen():
   ccv = ""
   num = randint(10, 999)
