@@ -20,14 +20,14 @@ def lookup(phone_number):
 def main():
     while True:
         try:
-            phone_number = input("\033[1;32m[+]Introdusca numero de telefono: \033[1;37m").strip().replace("-", "").replace(" ", "").replace("+", "")
+            phone_number = input("\033[1;32m[+]Enter phone number: \033[1;37m").strip().replace("-", "").replace(" ", "").replace("+", "")
         except KeyboardInterrupt:
             return
 
         try:
             infos = lookup(phone_number)
         except AttributeError:
-            print("Error: numero de telefono invalido\n")
+            print("Error: invalid phone number\n")
             continue
 
         [print(f"{info}: {infos[info]}") for info in infos]
