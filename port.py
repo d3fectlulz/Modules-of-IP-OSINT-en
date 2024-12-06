@@ -10,7 +10,7 @@ print("\033[1;32m|  __/ (_) | |  | |_   / __/ / __/")
 print("\033[1;32m|_|   \___/|_|   \__| |_____|_____|")
 print("\n")
 system("setterm -foreground green")
-ip = input("[+]Ingrese la IP que desea escanear > \033[1;37m")
+ip = input("[+]Enter the IP you want to scan > \033[1;37m")
 print("")
 
 ip_addr = (ip)
@@ -22,13 +22,13 @@ for port in portList:
         sock.settimeout(5)
         status = sock.connect_ex((ip_addr, port))                             
         if status == 0:
-            print("\033[1;33mPuerto | Servicio | Estado")
+            print("\033[1;33mPort | Service | State")
             print("")                     
-            print(f"\033[1;31mPuerto: \033[1;32m{port} SSH - Abierto")
+            print(f"\033[1;Port: \033[1;32m{port} SSH - Open")
         else:
-            print("\033[1;33mPuerto | Servicio | Estado")
+            print("\033[1;33mPort | Service | State")
             print("")
-            print(f"\033[1;31mPuerto: \033[1;32m{port} SSH - Cerrado")
+            print(f"\033[1;31mPort: \033[1;32m{port} SSH - Closed")
         sock.close()
     except socket.error as err:
         print(f"Connection error: {err}")
