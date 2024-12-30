@@ -6,13 +6,13 @@ echo -n -e "\e[1;32mDo you want to return to the menu?\e[0m \e[1;37m[\e[0m\e[1;3
 read option
 case $option in
 yes)
-cd /data/data/com.termux/files/home/IP-OSINT
+cd /data/data/com.termux/files/home/IP-OSINT-en
 #! /bin/bash
 bash osint.sh
 exit
 ;;
 no)
-cd /data/data/com.termux/files/home/IP-OSINT
+cd /data/data/com.termux/files/home/IP-OSINT-en
 #! /bin/bash
 exit
 ;;
