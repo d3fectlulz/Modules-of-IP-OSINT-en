@@ -67,7 +67,7 @@ for port in port2ssh:
         if status == 0:
             print(f"\033[1;31mPort: \033[1;32m{port} ssh - Open")
         else:
-            print(f"\033[1;31mPuerto: \033[1;32m{port} ssh - Closed")
+            print(f"\033[1;31mPort: \033[1;32m{port} ssh - Closed")
         sock.close()
     except socket.error as err:
         print(f"Connection error: {err}")
@@ -158,7 +158,7 @@ for port in port9http:
         if status == 0:
             print(f"\033[1;31mPort: \033[1;32m{port} http - Open")
         else:
-            print(f"\033[1;31mPuerto: \033[1;32m{port} http - Closed")
+            print(f"\033[1;31mPort: \033[1;32m{port} http - Closed")
         sock.close()
     except socket.error as err:
         print(f"Connection error: {err}")
